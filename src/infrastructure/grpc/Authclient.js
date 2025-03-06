@@ -18,7 +18,8 @@ class AuthClient extends  IAuthClient {
     constructor() {
         super()
         this.client = new authProto.AuthService(
-            'localhost:50051', 
+            //'localhost:50051', 
+            'auth:50051',
             grpc.credentials.createInsecure()
         );
     }
